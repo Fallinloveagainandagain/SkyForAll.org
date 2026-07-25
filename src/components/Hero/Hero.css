@@ -48,13 +48,9 @@
 
 .hero-title {
   margin-top: 40px;
-
   font-family: 'Press Start 2P';
-
   color: white;
-
   font-size: 4rem;
-
   text-shadow:
     0 0 5px white,
     0 0 15px #ff00ff,
@@ -66,14 +62,10 @@
 
 .hero-subtitle {
   margin-top: 35px;
-
   font-family: 'Orbitron';
-
   color: #00ffff;
-
   font-size: 2rem;
   font-weight: bold;
-
   text-shadow:
     0 0 10px cyan,
     0 0 20px cyan;
@@ -81,29 +73,19 @@
 
 .hero-banner {
   margin-top: 70px;
-
   width: 100%;
-
   overflow: hidden;
-
   border: 3px solid cyan;
-
   padding: 18px;
-
   box-shadow: 0 0 20px cyan;
-
   background: black;
 }
 
 .scroll-text {
   white-space: nowrap;
-
   color: #00ffff;
-
   font-family: 'Press Start 2P';
-
   font-size: 0.9rem;
-
   animation: marquee 18s linear infinite;
 }
 
