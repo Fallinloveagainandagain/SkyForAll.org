@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap');
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background: url('../../assets/stars.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.75));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  width: 90%;
+  max-width: 1200px;
+}
+
+.hero-logo {
+  width: 240px;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff,
+    0 0 80px #ff00ff;
+
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+.hero-title {
+  margin-top: 40px;
+
+  font-family: 'Press Start 2P';
+
+  color: white;
+
+  font-size: 4rem;
+
+  text-shadow:
+    0 0 5px white,
+    0 0 15px #ff00ff,
+    0 0 25px #ff00ff,
+    0 0 45px #ff00ff;
+
+  letter-spacing: 10px;
+}
+
+.hero-subtitle {
+  margin-top: 35px;
+
+  font-family: 'Orbitron';
+
+  color: #00ffff;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  text-shadow:
+    0 0 10px cyan,
+    0 0 20px cyan;
+}
+
+.hero-banner {
+  margin-top: 70px;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 3px solid cyan;
+
+  padding: 18px;
+
+  box-shadow: 0 0 20px cyan;
+
+  background: black;
+}
+
+.scroll-text {
+  white-space: nowrap;
+
+  color: #00ffff;
+
+  font-family: 'Press Start 2P';
+
+  font-size: 0.9rem;
+
+  animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.2rem;
+
+    letter-spacing: 4px;
+  }
+
+  .hero-logo {
+    width: 180px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .scroll-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-logo {
+    width: 140px;
+  }
+
+  .hero-banner {
+    padding: 12px;
+  }
+}
