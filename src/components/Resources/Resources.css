@@ -1,0 +1,31 @@
+.resources {
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron';
+}
+
+.resources h2 {
+  color: #ff00ff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px #ff00ff;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.resource-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid white;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resource-card:hover {
+  background: #00ffff;
+  color: black;
+  transform: scale(1.05);
+}
