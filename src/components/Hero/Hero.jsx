@@ -15,8 +15,7 @@ function Hero() {
 
         <div className="hero-banner">
           <div className="scroll-text">
-            DISCOVER THE COSMOS ✦ STUDENT LED ✦ BEGINNER FRIENDLY ✦ ONLINE
-            EVENTS ✦ OPEN TO EVERYONE ✦
+            ✦ STUDENT LED ✦ BEGINNER FRIENDLY ✦ ONLINE ON INSTAGRAM ✦ NON-PROFIT ✦ DISCOVER THE COSMOS
           </div>
         </div>
       </div>

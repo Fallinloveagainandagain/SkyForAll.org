@@ -1,0 +1,53 @@
+.window {
+  background: rgba(12, 12, 12, 0.82);
+  backdrop-filter: blur(4px);
+  border: 2px solid #d9d9d9;
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.15),
+    0 12px 30px rgba(0, 0, 0, 0.6);
+  transition: 0.35s;
+}
+
+.window:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 25px cyan,
+    0 0 60px rgba(0, 255, 255, 0.35);
+}
+
+section {
+  margin-bottom: 90px;
+}
+
+.window-header {
+  height: 32px;
+  background: #1718a5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  font-family: 'Press Start 2P';
+  font-size: 10px;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.window-buttons button {
+  width: 16px;
+  height: 16px;
+  background: #bdbdbd;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.close {
+  background: #ff4444;
+}
+
+.window-body {
+  padding: 22px;
+}

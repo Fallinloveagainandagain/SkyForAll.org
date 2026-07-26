@@ -1,0 +1,15 @@
+.about {
+  color: #3cff32;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.about h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.about p {
+  margin-bottom: 25px;
+}
