@@ -1,0 +1,77 @@
+.planner {
+  color: white;
+  font-family: 'Orbitron';
+}
+
+.planner h2 {
+  text-align: center;
+  margin-bottom: 45px;
+  color: #00ffff;
+  text-shadow: 0 0 15px cyan;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.map-card,
+.events-card,
+.tonight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  transition: 0.35s;
+  border-radius: 8px;
+}
+
+.map-card:hover,
+.events-card:hover,
+.tonight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px cyan;
+}
+
+.planner-icon {
+  font-size: 40px;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.fake-map {
+  margin-top: 30px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  border: 2px dashed #555;
+  border-radius: 8px;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tonight-card ul {
+  margin-top: 20px;
+  line-height: 2.2;
+  list-style: none;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .planner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fake-map {
+    height: 180px;
+  }
+}
