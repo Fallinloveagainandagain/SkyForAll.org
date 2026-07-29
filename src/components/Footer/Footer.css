@@ -1,0 +1,20 @@
+.footer {
+  padding: 90px 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron';
+}
+
+.footer h2 {
+  color: #00ffff;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px cyan;
+}
+
+.footer div {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
