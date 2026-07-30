@@ -1,5 +1,5 @@
 import './Hero.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo/logo.png';
 
 function Hero() {
   return (
@@ -15,7 +15,8 @@ function Hero() {
 
         <div className="hero-banner">
           <div className="scroll-text">
-            ✦ STUDENT LED ✦ BEGINNER FRIENDLY ✦ ONLINE ON INSTAGRAM ✦ NON-PROFIT ✦ DISCOVER THE COSMOS
+            ✦ STUDENT LED ✦ BEGINNER FRIENDLY ✦ ONLINE ON INSTAGRAM ✦ NON-PROFIT
+            ✦ DISCOVER THE COSMOS
           </div>
         </div>
       </div>

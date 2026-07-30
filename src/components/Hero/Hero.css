@@ -28,8 +28,8 @@
 }
 
 .hero-logo {
-  width: 240px;
-  border-radius: 10px;
+  width: 250px;
+  border-radius: 100%;
   box-shadow:
     0 0 20px #ff00ff,
     0 0 40px #ff00ff,
