@@ -5,51 +5,71 @@
   box-shadow:
     0 0 20px rgba(0, 255, 255, 0.25),
     0 10px 40px rgba(0, 0, 0, 0.6);
+
+  width: 80%;
+  max-width: 1200px;
 }
 
-.window:hover {
+/* .window:hover {
   transform: translateY(-8px);
   box-shadow:
     0 0 25px cyan,
     0 0 60px rgba(0, 255, 255, 0.35);
-}
+} */
 
 section {
   margin-bottom: 90px;
+  align-items: start;
+  justify-items: center;
 }
 
 .window-header {
   height: 34px;
-  background: linear-gradient(to bottom, #2b5cff, #143fb7);
-  border-bottom: 2px solid white;
+  background: linear-gradient(to bottom, #031245, #0d2978);
+  border: 2px solid white;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window-header span {
+  margin-left: 10px;
+  color: white;
+  font-size: 0.8rem;
 }
 
 .window-buttons {
   display: flex;
+  margin-right: 10px;
   gap: 5px;
 }
 
 .window-buttons button {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   background: #bdbdbd;
-  border: 2px solid white;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
   cursor: pointer;
 }
 
-.close {
-  background: #ff4444;
+.window-buttons i {
+  color: white;
+  font-size: 0.7rem;
 }
 
 .window-body {
   padding: 22px;
+  border: 2px solid white;
 }
 
 /* Floating animation */
-.window {
+/* .window {
   animation: windowFloat 5s ease-in-out infinite;
-}
+} */
 
 @keyframes windowFloat {
   0% {
@@ -65,36 +85,6 @@ section {
   }
 }
 
-button {
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.08);
-  box-shadow:
-    0 0 15px cyan,
-    0 0 30px cyan;
-}
-
 html {
   scroll-behavior: smooth;
-}
-
-.window {
-  opacity: 0;
-  animation:
-    fadeUp 0.8s forwards,
-    windowFloat 5s infinite;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

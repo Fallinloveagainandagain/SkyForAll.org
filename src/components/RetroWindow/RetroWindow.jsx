@@ -7,9 +7,9 @@ function RetroWindow({ title, children }) {
         <span>{title}</span>
 
         <div className="window-buttons">
-          <button></button>
-          <button></button>
-          <button className="close"></button>
+          <button><i class="fa-solid fa-minus"></i></button>
+          <button><i class="fa-regular fa-square"></i></button>
+          <button className="close"><i class="fa-solid fa-xmark"></i></button>
         </div>
       </div>
 
