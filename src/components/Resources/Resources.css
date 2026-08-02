@@ -6,26 +6,137 @@
 
 .resources h2 {
   color: #ff00ff;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   text-shadow: 0 0 15px #ff00ff;
 }
 
 .resource-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px;
 }
 
 .resource-card {
   background: rgba(255, 255, 255, 0.08);
   border: 2px solid white;
-  padding: 20px;
-  cursor: pointer;
+  padding: 25px;
   transition: 0.3s;
+  border-radius: 8px;
 }
 
 .resource-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.resource-card h3 {
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.resource-card p {
+  color: #ddd;
+  line-height: 1.6;
+  min-height: 60px;
+}
+
+.resource-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
   background: #00ffff;
   color: black;
-  transform: scale(1.05);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.resource-btn:hover {
+  background: #ff00ff;
+  color: white;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+@media (max-width: 768px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resource-icon {
+  font-size: 60px;
+  color: #00ffff;
+  margin-bottom: 20px;
+  transition: 0.4s;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.resource-card:nth-child(1) .resource-icon{
+
+    animation-delay:0s;
+
+}
+
+.resource-card:nth-child(2) .resource-icon{
+
+    animation-delay:.5s;
+
+}
+
+.resource-card:nth-child(3) .resource-icon{
+
+    animation-delay:1s;
+
+}
+
+.resource-card:nth-child(4) .resource-icon{
+
+    animation-delay:1.5s;
+
+}
+
+@keyframes floatIcon{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.resource-card:hover .resource-icon{
+
+    color:#ff00ff;
+
+    transform:scale(1.2) rotate(10deg);
+
+    text-shadow:
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 35px #ff00ff;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 0 15px cyan,
+        0 0 35px rgba(0,255,255,.5);
+
 }
