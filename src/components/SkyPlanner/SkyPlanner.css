@@ -1,77 +1,343 @@
 .planner {
   color: white;
-  font-family: 'Orbitron';
+  font-family: 'Orbitron', sans-serif;
 }
 
-.planner h2 {
-  text-align: center;
-  margin-bottom: 45px;
-  color: #00ffff;
-  text-shadow: 0 0 15px cyan;
-}
+/* ================= HEADER ================= */
 
-.planner-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.map-card,
-.events-card,
-.tonight-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 25px;
-  transition: 0.35s;
-  border-radius: 8px;
-}
-
-.map-card:hover,
-.events-card:hover,
-.tonight-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px cyan;
-}
-
-.planner-icon {
-  font-size: 40px;
-  color: #00ffff;
-  margin-bottom: 20px;
-}
-
-.fake-map {
-  margin-top: 30px;
-  height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 90px;
-  border: 2px dashed #555;
-  border-radius: 8px;
-}
-
-.event {
+.scan-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 18px;
-  padding: 12px 15px;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 14px;
+  border: 1px solid #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+  margin-bottom: 12px;
 }
 
-.tonight-card ul {
-  margin-top: 20px;
-  line-height: 2.2;
-  list-style: none;
-  padding: 0;
+.scan-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00ff88;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 900px) {
-  .planner-grid {
+.scan-left svg {
+  animation: blink 1s infinite;
+}
+
+.scan-date {
+  font-size: 11px;
+  color: #999;
+}
+
+/* ================= TOP ================= */
+
+.planner-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.planner-box {
+  border: 1px solid #444;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px;
+}
+
+.planner-box h5 {
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.moon {
+  font-size: 40px;
+  text-align: center;
+  animation: rotateMoon 18s linear infinite;
+}
+
+.planner-box h3 {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.planner-box p {
+  text-align: center;
+  color: #aaa;
+  font-size: 12px;
+}
+
+/* ================= QUALITY ================= */
+
+.quality-bars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 18px 0;
+}
+
+.quality-bars span {
+  width: 15px;
+  height: 18px;
+  border: 1px solid #666;
+}
+
+.quality-bars .fill {
+  background: #ffe600;
+  box-shadow: 0 0 8px #ffe600;
+}
+
+/* ================= EVENT ================= */
+
+.event-banner {
+  margin-top: 12px;
+  border: 1px solid #ff00ff;
+  background: rgba(255, 0, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+
+.event-banner h4 {
+  color: #ff55ff;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.event-banner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.event-banner small {
+  color: #aaa;
+}
+
+.countdown {
+  text-align: center;
+}
+
+.countdown span {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+.countdown p {
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* ================= TABS ================= */
+
+.tab-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.equipment {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2px;
+}
+
+.tab-row button {
+  height: 34px;
+
+  background: #111;
+
+  color: #888;
+
+  border: 1px solid #555;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition: 0.25s;
+}
+
+.tab-row button:hover {
+  background: #222;
+}
+
+.active {
+  background: #00ffff !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+.active-eye {
+  background: #ffe600 !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+/* ================= STATUS ================= */
+
+.status {
+  margin-top: 10px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #00ff88;
+
+  color: #00ff88;
+
+  font-size: 12px;
+}
+
+/* ================= ACCORDION ================= */
+
+.accordion-list {
+  margin-top: 10px;
+}
+
+.accordion {
+  border: 1px solid #444;
+
+  margin-bottom: 8px;
+
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.accordion-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.accordion-header:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.badge {
+  background: #1d1d1d;
+
+  border: 1px solid #666;
+
+  color: #00ffff;
+
+  font-size: 10px;
+
+  padding: 4px 10px;
+
+  margin-right: 10px;
+}
+
+.arrow {
+  color: #aaa;
+}
+
+.accordion-body {
+  padding: 14px;
+
+  border-top: 1px solid #333;
+
+  animation: slide 0.25s ease;
+}
+
+.detail-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.detail-grid strong {
+  color: #00ffff;
+
+  font-size: 11px;
+}
+
+.detail-grid p {
+  color: #ccc;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+}
+
+.desc {
+  margin-top: 15px;
+
+  color: #bbb;
+
+  line-height: 1.6;
+
+  font-size: 12px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes rotateMoon {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .planner-top {
     grid-template-columns: 1fr;
   }
 
-  .fake-map {
-    height: 180px;
+  .tab-row {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
   }
 }
