@@ -1,8 +1,24 @@
+.footer {
+  /* background-color: #000; */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffff;
+  text-shadow: 0 0 10px cyan;
+}
+
+
 .social-buttons {
-  margin: 40px 0;
+  /* margin: 40px 0; */
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -10,10 +26,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 28px;
+  padding: 10px 13px;
   text-decoration: none;
   color: white;
-  font-family: 'Orbitron';
   font-weight: bold;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -21,22 +36,24 @@
 }
 
 .social-btn i {
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 /* Discord */
 .discord {
   background: #5865f2;
+  border: 1px solid #fff;
 }
 
 .discord:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 18px #5865f2;
+  box-shadow: 0 0 20px #5865f2;
 }
 
 /* Instagram */
 .instagram {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  border: 1px solid #fff;
 }
 
 .instagram:hover {
@@ -45,24 +62,16 @@
 }
 
 .social-btn:hover i {
-  animation: iconBounce 0.6s ease;
+  animation: rotate 1s ease;
 }
 
-@keyframes iconBounce {
+@keyframes rotate {
   0% {
-    transform: scale(1);
-  }
-
-  30% {
-    transform: scale(1.3) rotate(-10deg);
-  }
-
-  60% {
-    transform: scale(0.9) rotate(10deg);
+    transform: scale(1) rotate(0deg);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1) rotate(360deg);
   }
 }
 
@@ -72,7 +81,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
+  font-size: 1.3rem;
   color: #00ffff;
   text-shadow: 0 0 10px cyan;
 }
@@ -94,4 +103,10 @@
   100% {
     transform: scale(1);
   }
+}
+
+.copyright {
+  margin: 40px;
+  font-size: 0.8rem;
+  color: #d3d3d3;
 }

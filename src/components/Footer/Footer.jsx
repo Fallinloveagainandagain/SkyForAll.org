@@ -23,7 +23,7 @@ function Footer() {
     <footer className="footer">
       <h2>SKY FOR ALL</h2>
 
-      <p>Made with ❤️ for astronomy lovers.</p>
+      {/* <p>Made with ❤️ for astronomy lovers.</p> */}
 
       <div className="social-buttons">
         <a
@@ -33,7 +33,6 @@ function Footer() {
           className="social-btn discord"
         >
           <i className="fa-brands fa-discord"></i>
-          Discord
         </a>
 
         <a
@@ -43,7 +42,6 @@ function Footer() {
           className="social-btn instagram"
         >
           <i className="fa-brands fa-instagram"></i>
-          Instagram
         </a>
       </div>
 
@@ -56,7 +54,7 @@ function Footer() {
         </span>
       </div>
 
-      <p>©2026 Sky For All</p>
+      <p className="copyright">©2026 Sky For All / Open Astronomy. All rights reserved in this dimension.</p>
     </footer>
   );
 }
