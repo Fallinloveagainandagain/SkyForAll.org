@@ -10,7 +10,6 @@ import SkyPlanner from './components/SkyPlanner/SkyPlanner';
 import Footer from './components/Footer/Footer';
 
 import Stars from './components/Stars/Stars';
-import Planet from './components/Planet/Planet';
 
 function App() {
   return (
@@ -18,8 +17,6 @@ function App() {
       <div className="background"></div>
 
       <Stars />
-
-      <Planet />
 
       <div className="content">
         <Hero />
