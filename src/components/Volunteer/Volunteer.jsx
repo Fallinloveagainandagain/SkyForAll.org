@@ -5,8 +5,8 @@ function Volunteer() {
   return (
     <RetroWindow title="volunteer_portal.exe">
       <div className="volunteer">
-        <div className="title">
-          <i className="fa-regular fa-star"></i> JOIN THE CREW
+        <div className="volunteer-title">
+        &nbsp;&nbsp;<i className="fa-regular fa-star"></i> &nbsp;JOIN THE CREW
         </div>
 
         <p>

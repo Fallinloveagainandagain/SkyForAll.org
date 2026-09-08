@@ -1,6 +1,6 @@
 .planner {
   color: white;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'cp437', monospace;
 }
 
 /* ================= HEADER ================= */
@@ -149,19 +149,12 @@
 
 .tab-row button {
   height: 34px;
-
   background: #111;
-
   color: #888;
-
   border: 1px solid #555;
-
   cursor: pointer;
-
   font-family: inherit;
-
   font-size: 11px;
-
   transition: 0.25s;
 }
 
@@ -185,13 +178,9 @@
 
 .status {
   margin-top: 10px;
-
   padding: 10px 12px;
-
   border: 1px solid #00ff88;
-
   color: #00ff88;
-
   font-size: 12px;
 }
 
@@ -203,23 +192,16 @@
 
 .accordion {
   border: 1px solid #444;
-
   margin-bottom: 8px;
-
   background: rgba(255, 255, 255, 0.03);
 }
 
 .accordion-header {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   padding: 12px;
-
   cursor: pointer;
-
   transition: 0.25s;
 }
 
@@ -229,15 +211,10 @@
 
 .badge {
   background: #1d1d1d;
-
   border: 1px solid #666;
-
   color: #00ffff;
-
   font-size: 10px;
-
   padding: 4px 10px;
-
   margin-right: 10px;
 }
 
@@ -247,41 +224,31 @@
 
 .accordion-body {
   padding: 14px;
-
   border-top: 1px solid #333;
-
   animation: slide 0.25s ease;
 }
 
 .detail-grid {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 15px;
 }
 
 .detail-grid strong {
   color: #00ffff;
-
   font-size: 11px;
 }
 
 .detail-grid p {
   color: #ccc;
-
   margin-top: 3px;
-
   font-size: 12px;
 }
 
 .desc {
   margin-top: 15px;
-
   color: #bbb;
-
   line-height: 1.6;
-
   font-size: 12px;
 }
 
@@ -311,13 +278,11 @@
 @keyframes slide {
   from {
     opacity: 0;
-
     transform: translateY(-10px);
   }
 
   to {
     opacity: 1;
-
     transform: translateY(0);
   }
 }

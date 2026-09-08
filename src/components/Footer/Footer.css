@@ -75,22 +75,6 @@
   }
 }
 
-.visitor-counter {
-  margin: 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.3rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px cyan;
-}
-
-.visitor-counter i {
-  font-size: 24px;
-  animation: pulse 2s infinite;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);

@@ -1,25 +1,24 @@
 .volunteer {
   text-align: left;
   color: white;
-  font-family: 'Orbitron', sans-serif;
   padding: 10px;
 }
 
-.title {
+.volunteer-title {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
   color: yellow;
   margin-bottom: 15px;
   text-shadow: 0 0 20px yellow;
-  font-family: 'serif';
+  font-family: 'emoji' , sans-serif;
 }
 
 .volunteer p {
   margin-bottom: 20px;
   margin-left: 30px;
   color: #ddd;
-  font-family: 'Courier New', monospace;
+  font-family: 'cp437', monospace;
 }
 
 .form {

@@ -133,7 +133,41 @@ const roadmapData = [
 ];
 
 function Roadmap() {
-  const [openMonths, setOpenMonths] = useState(['AUGUST 2026']);
+  const today = new Date();
+
+  // Get the month/year from "JUNE 2026"
+  const getMonthDate = (monthString) => {
+    const [month, year] = monthString.split(' ');
+    return new Date(`${month} 1, ${year}`);
+  };
+
+  // Determine whether a month is past, current, or future
+  const getMonthStatus = (monthString) => {
+    const roadmapDate = getMonthDate(monthString);
+
+    const currentMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+    if (roadmapDate < currentMonth) {
+      return 'completed';
+    }
+
+    if (
+      roadmapDate.getFullYear() === currentMonth.getFullYear() &&
+      roadmapDate.getMonth() === currentMonth.getMonth()
+    ) {
+      return 'current';
+    }
+
+    return 'future';
+  };
+
+  const currentMonth = roadmapData.find(
+    (item) => getMonthStatus(item.month) === 'current',
+  );
+
+  const [openMonths, setOpenMonths] = useState(
+    currentMonth ? [currentMonth.month] : [],
+  );
 
   const toggleMonth = (month) => {
     setOpenMonths((prev) =>
@@ -147,7 +181,6 @@ function Roadmap() {
     <RetroWindow title="roadmap_2026.exe">
       <div className="roadmap">
         {/* HEADER */}
-
         <div className="roadmap-heading">
           <span className="roadmap-arrow">▶</span>
 
@@ -164,23 +197,23 @@ function Roadmap() {
           <div className="roadmap-line"></div>
 
           {roadmapData.map((item) => {
+            const status = getMonthStatus(item.month);
+
             const isOpen = openMonths.includes(item.month);
 
             return (
               <div
-                className={`roadmap-item ${item.color} ${
-                  item.current ? 'current' : ''
-                } ${isOpen ? 'is-open' : ''}`}
+                className={`roadmap-item ${item.color} ${status} ${
+                  isOpen ? 'is-open' : ''
+                }`}
                 key={item.month}
               >
                 {/* ICON */}
-
                 <div className="roadmap-icon">
                   <span>{item.icon}</span>
                 </div>
 
                 {/* MONTH */}
-
                 <div className="month-wrapper">
                   <button
                     className="month-header"
@@ -190,11 +223,13 @@ function Roadmap() {
                       <div className="month-title-row">
                         <span className="month-name">{item.month}</span>
 
-                        {item.status && (
-                          <span className="completed-tag">{item.status}</span>
+                        {/* COMPLETED */}
+                        {status === 'completed' && (
+                          <span className="completed-tag">COMPLETED</span>
                         )}
 
-                        {item.current && (
+                        {/* CURRENT */}
+                        {status === 'current' && (
                           <span className="current-tag">◀ YOU ARE HERE</span>
                         )}
                       </div>
@@ -207,7 +242,7 @@ function Roadmap() {
                     <span className="month-arrow">{isOpen ? '▲' : '▼'}</span>
                   </button>
 
-                  {/* DROPDOWN CONTENT */}
+                  {/* DROPDOWN */}
                   {isOpen && (
                     <div className="month-content">
                       <div className="activities-title">ACTIVITIES</div>

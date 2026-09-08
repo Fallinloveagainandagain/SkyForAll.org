@@ -1,6 +1,6 @@
 .roadmap {
   color: white;
-  font-family: 'Orbitron', monospace;
+  font-family: cp437, monospace;
 }
 
 /* HEADER */
@@ -28,7 +28,7 @@
 .roadmap-subtitle {
   margin: 0 0 24px 0;
   color: #999;
-  font-family: Arial, sans-serif;
+  font-family: orbron, sans-serif;
   font-size: 13px;
 }
 
@@ -121,7 +121,6 @@
   border-bottom-color: rgba(255, 255, 255, 0.15);
 }
 
-
 /* MONTH INFO */
 
 .month-info {
@@ -138,17 +137,17 @@
 }
 
 .month-name {
-  font-size: 15px;
+  font-size: 0.7rem;
   font-weight: bold;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1rem;
+  font-family: 'press start 2p', monospace;
 }
 
 .month-description {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-family: orbron, sans-serif;
+  font-size: 0.75rem;
   color: #999;
 }
-
 
 /* MONTH COLORS */
 
@@ -182,6 +181,54 @@
 
 .red .month-name {
   color: #ff6666;
+}
+
+/* AUTOMATICALLY COMPLETED MONTHS */
+.roadmap-item.completed {
+  opacity: 0.45;
+}
+
+.roadmap-item.completed .roadmap-icon {
+  border-color: #292929;
+  background: #0c0c0c;
+  filter: grayscale(100%);
+}
+
+.roadmap-item.completed .month-header {
+  background: #101010;
+  border-color: #252525;
+}
+
+.roadmap-item.completed .month-name {
+  color: #555;
+}
+
+.roadmap-item.completed .month-description {
+  color: #444;
+}
+
+.roadmap-item.completed .month-arrow {
+  color: #444;
+}
+
+.roadmap-item.completed .completed-tag {
+  color: #444;
+  border-color: #333;
+}
+
+/* AUTOMATIC CURRENT MONTH */
+.roadmap-item.current .month-name {
+  color: #69ff00;
+}
+
+.roadmap-item.current .month-header {
+  border-color: #69ff00;
+  background: rgba(105, 255, 0, 0.055);
+}
+
+.roadmap-item.current .roadmap-icon {
+  border-color: #69ff00;
+  box-shadow: 0 0 8px rgba(105, 255, 0, 0.5);
 }
 
 /* COMPLETED TAG */
@@ -222,9 +269,7 @@
   color: #888;
 }
 
-
 /* DROPDOWN */
-
 
 .month-content {
   padding: 12px 14px;
@@ -282,9 +327,7 @@
   margin-top: 2px;
 }
 
-MEMBER GOAL
-
-.member-goal {
+MEMBER GOAL .member-goal {
   margin-top: 13px;
   padding-left: 10px;
 
@@ -306,7 +349,7 @@ MEMBER GOAL
   line-height: 1.5;
 }
 
- /* YEAR EXPECTATIONS */
+/* YEAR EXPECTATIONS */
 
 .year-expectations {
   margin-top: 18px;
@@ -338,9 +381,7 @@ MEMBER GOAL
   color: #ccc;
 }
 
-
- /* MISSION */
-
+/* MISSION */
 
 .mission-box {
   margin-top: 16px;
@@ -374,7 +415,6 @@ MEMBER GOAL
   color: #ff00d9;
   font-size: 11px;
 }
-
 
 /* MOBILE */
 @media (max-width: 700px) {
